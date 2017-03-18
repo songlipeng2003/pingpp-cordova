@@ -1,0 +1,12 @@
+{
+    "CFNetwork.framework": 1,
+    "SystemConfiguration.framework": 1,
+    "Security.framework": 1,
+    "QuartzCore.framework": 1,
+    "CoreTelephony.framework": 1,
+    "CoreMotion.framework": 1,
+    "libc++.tbd": 1,
+    "libz.tbd": 1,
+    "libsqlite3.0.tbd": 1,
+    "libstdc++.tbd": 1
+}

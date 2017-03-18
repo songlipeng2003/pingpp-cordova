@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-pingpp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="1.0.0">
+
+    <name>Pingpp</name>
+    <description>cordova plugin for ping++</description>
+    <author>ping++</author>
+    <keywords>pingpp,pingxx,ping++,pingppone,alipay,weixin,bdwallet,unionpay,applepay</keywords>
+    <license>Apache 2.0</license>
+    <engines>
+        <engine name="cordova" version=">=5.4.1"/>
+    </engines>
+    
+    <js-module src="www/pingpp.js" name="pingpp">
+        <clobbers target="Pingpp" />
+    </js-module>
+
+    <platform name="android">
+    
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PingppPlugin">
+                <param name="android-package" value="cordova.plugin.pingpp.PingppPlugin"/>
+            </feature>
+        </config-file>
+        
+        <!--
+        <config-file target="res/values/cmbkb_strings.xml" parent="/*">
+        	<string name="cmbkb_publickey">$pingpp_url_scheme</string>
+        </config-file> -->
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+    		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    		<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    		<uses-permission android:name="android.permission.NFC" />
+    		<uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE" />
+    		<uses-permission-sdk-23 android:name="android.permission.NFC" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+            <activity
+                    android:name="com.pingplusplus.android.PaymentActivity"
+                    android:configChanges="orientation|screenSize|keyboardHidden|navigation"
+                    android:launchMode="singleTop"
+                    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            <activity-alias
+                    android:name=".wxapi.WXPayEntryActivity"
+                    android:exported="true"
+                    android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+            <activity
+                    android:name="com.alipay.sdk.app.H5PayActivity"
+                    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+                    android:exported="false"
+                    android:screenOrientation="behind" />
+            <activity
+                    android:name="com.alipay.sdk.auth.AuthActivity"
+                    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+                    android:exported="false"
+                    android:screenOrientation="behind" />
+			<activity
+            		android:name="com.unionpay.uppay.PayActivity"
+           			android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+        </config-file>
+
+        <source-file src="src/android/PingppPlugin.java" target-dir="src/cordova/plugin/pingpp/"/>
+        <source-file src="sdk/android/lib/pingpp/libs/alipaySingle-20161222.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/libammsdk.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/libpingpp-2.1.9.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/UPPayAssistEx.jar" target-dir="libs"/>   
+        <source-file src="sdk/android/lib/pingpp/libs/UPPayPluginExPro.jar" target-dir="libs"/>
+        
+        <source-file src="sdk/android/lib/pingpp/libs/armeabi/libentryexpro.so" target-dir="libs/armeabi"/>
+        <source-file src="sdk/android/lib/pingpp/libs/armeabi/libuptsmaddon.so" target-dir="libs/armeabi"/>
+        <source-file src="sdk/android/lib/pingpp/libs/armeabi/libpingpp.so" target-dir="libs/armeabi"/>
+        <source-file src="sdk/android/lib/pingpp/libs/arm64-v8a/libuptsmaddon.so" target-dir="libs/arm64-v8a"/>
+        <source-file src="sdk/android/lib/pingpp/libs/arm64-v8a/libentryexpro.so" target-dir="libs/arm64-v8a"/>
+        <source-file src="sdk/android/lib/pingpp/libs/arm64-v8a/libpingpp.so" target-dir="libs/arm64-v8a"/>
+		<source-file src="sdk/android/lib/pingpp/libs/armeabi-v7a/libentryexpro.so" target-dir="libs/armeabi-v7a"/>
+		<source-file src="sdk/android/lib/pingpp/libs/armeabi-v7a/libuptsmaddon.so" target-dir="libs/armeabi-v7a"/>
+		<source-file src="sdk/android/lib/pingpp/libs/armeabi-v7a/libpingpp.so" target-dir="libs/armeabi-v7a"/>
+		<source-file src="sdk/android/lib/pingpp/libs/mips/libentryexpro.so" target-dir="libs/mips"/>
+		<source-file src="sdk/android/lib/pingpp/libs/mips/libpingpp.so" target-dir="libs/mips"/>
+		<source-file src="sdk/android/lib/pingpp/libs/x86/libentryexpro.so" target-dir="libs/x86"/>
+		<source-file src="sdk/android/lib/pingpp/libs/x86/libuptsmaddon.so" target-dir="libs/x86"/>
+		<source-file src="sdk/android/lib/pingpp/libs/x86/libpingpp.so" target-dir="libs/x86"/>
+		<source-file src="sdk/android/lib/pingpp/libs/x86_64/libuptsmaddon.so" target-dir="libs/x86_64"/>
+		<source-file src="sdk/android/lib/pingpp/libs/x86_64/libentryexpro.so" target-dir="libs/x86_64"/>
+		<source-file src="sdk/android/lib/pingpp/libs/x86_64/libpingpp.so" target-dir="libs/x86_64"/>
+		
+		<source-file src="sdk/android/lib/pingpp/libs/data.bin" target-dir="assets"/>
+		<source-file src="sdk/android/lib/pingpp/libs/pingpp_web.html" target-dir="assets"/>		
+		
+		<source-file src="sdk/android/lib/pingpp/res/drawable/pingpp_back.png" target-dir="res/drawable"/>
+		<source-file src="sdk/android/lib/pingpp/res/drawable/tips_bg.9.png" target-dir="res/drawable"/>
+		
+		<source-file src="sdk/android/lib/pingpp/res/layout/activity_pingpp_payment.xml" target-dir="res/layout"/>
+		
+		<source-file src="sdk/android/lib/pingpp/res/values/colors.xml" target-dir="res/values"/>
+		
+    </platform>
+
+    <platform name="ios">
+        <framework src="CFNetwork.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="Security.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="CoreMotion.framework" />
+        <framework src="libc++.tbd" />
+        <framework src="libz.tbd" />
+        <framework src="libsqlite3.0.tbd" />
+        <framework src="libstdc++.tbd" />
+
+        <resource-file src="sdk/ios/lib/Channels/Alipay/AlipaySDK.bundle"/>
+        <framework src="sdk/ios/lib/Channels/Alipay/AlipaySDK.framework" custom="true"/>
+        <source-file src="sdk/ios/lib/Channels/Alipay/libpingpp+alipay.a" framework="true"/>
+        <source-file src="sdk/ios/lib/Channels/UnionPay/libPaymentControl.a" framework="true"/>
+        <source-file src="sdk/ios/lib/Channels/UnionPay/libpingpp+up.a" framework="true"/>
+        <resource-file src="sdk/ios/lib/Pingpp.bundle"/>
+        <source-file src="sdk/ios/lib/libpingppcore.a" framework="true"/>
+        <header-file src="sdk/ios/lib/Pingpp.h"/>
+        <source-file src="sdk/ios/lib/Dependencies/Network/libpingpp+network.a" framework="true"/>
+        <header-file src="sdk/ios/lib/Dependencies/Network/PingppURLResponse.h"/>
+        <header-file src="src/ios/PingppPlugin.h" target-dir="PingppPlugin"/>
+        <source-file src="src/ios/PingppPlugin.m" target-dir="PingppPlugin"/>
+
+        <config-file target="config.xml" parent="/widget">
+            <feature name="PingppPlugin">
+                <param name="ios-package" value="PingppPlugin"/>
+            </feature>
+            <preference name="pingpp_url_scheme" value="$pingpp_url_scheme" />
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>weixin</string>
+                <string>wechat</string>
+                <string>alipay</string>
+            </array>
+        </config-file>
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <!-- 填写URL-SCHEME -->
+                        <string>$pingpp_url_scheme</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+
+    </platform>
+
+    <hook type="before_plugin_install" src="scripts/clone_pingpp_sdk.js" />
+</plugin>
