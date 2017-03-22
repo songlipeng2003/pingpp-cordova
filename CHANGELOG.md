@@ -1,5 +1,5 @@
 ### 1.0.0
-- 创建 cordova-plugin-pingpp
+- 创建 pingpp-cordova
 - Ping++ 官方 SDK 版本 :
     - iOS:  2.2.12
         - 更改：更新 Alipay SDK (兼容 支付宝 2.0)

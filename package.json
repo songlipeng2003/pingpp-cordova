@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-pingpp",
+  "version": "1.0.0",
+  "description": "pingpp cordova/phonegap plugin",
+  "cordova": {
+    "id": "cordova-plugin-pingpp",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.coding.net/pingplusplus/pingpp-cordova.git"
+  },
+  "keywords": [
+    "pingpp",
+    "pingxx",
+    "ping++",
+    "alipay",
+    "wechat",
+    "applepay",
+    "unionpay"
+  ],
+  "author": "Ping++",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://coding.net/u/pingplusplus/p/pingpp-cordova/topic"
+  },
+  "homepage": "https://coding.net/u/pingplusplus/p/pingpp-cordova/git"
+}

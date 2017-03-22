@@ -8,26 +8,23 @@ Ping++ 是为移动端应用以及 PC 网页量身打造的下一代支付系统
 4. QQ钱包 (qpay)
 
 ## 插件安装
-
 ```sh
-$ cordova plugin add https://github.com/litaoyu/cordova-plugin-pingpp.git
+$ cordova plugin add https://git.coding.net/pingplusplus/pingpp-cordova.git
 ```
 
 ### 使用方法
-
 ```js
 /** 
-* 调用支付
-* @param object {"object":"charge 或 order" , "urlScheme":"YOU-URLSCHEME"}
-* @param function completionCallback  支付结果回调 (result, error)
-*/
-Pingpp.createPayment(object
-        , function (result, error) {
-      alert(result);
-      alert(error);
-    });
+ * 调用支付
+ * @param object {"object":"charge 或 order" , "urlScheme":"YOU-URLSCHEME"}
+ * @param function completionCallback  支付结果回调 (result, error)
+ */
+Pingpp.createPayment(object, function (result, error) {
+    alert(result);
+    alert(error);
+});
 
-//开启debug模式
+// 开启debug模式
 Pingpp.setDebugMode(enabled) // [true] or [false];
 
 /**
@@ -35,19 +32,17 @@ Pingpp.setDebugMode(enabled) // [true] or [false];
  * @param Function successCallback (version)
  */
 Pingpp.getVersion(function(version){
-    alert("当前SDK版本号是:"+version);
+    alert("当前SDK版本号是:" + version);
 });
 ```
 
 
-#### 官方SDK
+#### 官方 SDK
 [pingpp-ios](https://github.com/PingPlusPlus/pingpp-ios)
 
 [pingpp-android](https://github.com/PingPlusPlus/pingpp-android)
 
-
 ### 问题
-[问题](https://github.com/litaoyu/cordova-plugin-pingpp/issues)
+[问题](https://coding.net/u/pingplusplus/p/pingpp-cordova/topic)
 
 **关于如何使用 SDK 请参考 [开发者中心](https://www.pingxx.com/docs/index) **
-

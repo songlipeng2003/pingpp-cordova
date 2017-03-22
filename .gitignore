@@ -1,2 +1,3 @@
 example/platforms
 example/plugins
+node_modules/*
