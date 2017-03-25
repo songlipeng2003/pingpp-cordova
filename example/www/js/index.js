@@ -18,11 +18,10 @@
  */
 
 var btnArr;
-var obj = {"charge 或 order"};
+var obj = {}; //"charge 或 order"
 var app = {
   // Application Constructor
   initialize: function () {
-    // document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     btnArr = document.getElementsByClassName("payBtn")
     for (var i = 0; i < btnArr.length; i++) {
 
@@ -34,21 +33,17 @@ var app = {
 
   },
   pay: function () {
-
-    
-    navigator.pingpp.createPayment(obj
+    Pingpp.createPayment(obj
         , function (result, error) {
       alert(result);
       alert(error);
     });
-
-
   },
   setDebugMode: function () {
-    pingpp.setDebugMode(true);
+    Pingpp.setDebugMode(true);
   },
   getVersion:function () {
-    pingpp.getVersion(function (version) {
+    Pingpp.getVersion(function (version) {
       alert(version);
     });
 
