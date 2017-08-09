@@ -24,11 +24,6 @@
                 <param name="android-package" value="cordova.plugin.pingpp.PingppPlugin"/>
             </feature>
         </config-file>
-        
-        <!--
-        <config-file target="res/values/cmbkb_strings.xml" parent="/*">
-        	<string name="cmbkb_publickey">$pingpp_url_scheme</string>
-        </config-file> -->
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
@@ -46,7 +41,14 @@
                     android:name="com.pingplusplus.android.PaymentActivity"
                     android:configChanges="orientation|screenSize|keyboardHidden|navigation"
                     android:launchMode="singleTop"
-                    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+                    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+                    <intent-filter>
+                       <action android:name="android.intent.action.VIEW"/>
+                       <category android:name="android.intent.category.BROWSABLE"/>
+                       <category android:name="android.intent.category.DEFAULT"/>
+                       <data android:scheme="qwalletXXXXXXXX"/>
+                    </intent-filter>
+            </activity>
             <activity-alias
                     android:name=".wxapi.WXPayEntryActivity"
                     android:exported="true"
@@ -67,11 +69,12 @@
         </config-file>
 
         <source-file src="src/android/PingppPlugin.java" target-dir="src/cordova/plugin/pingpp/"/>
-        <source-file src="sdk/android/lib/pingpp/libs/alipaySingle-20161222.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/alipaySingle-20170510.jar" target-dir="libs"/>
         <source-file src="sdk/android/lib/pingpp/libs/libammsdk.jar" target-dir="libs"/>
-        <source-file src="sdk/android/lib/pingpp/libs/libpingpp-2.1.9.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/libpingpp-2.1.11.jar" target-dir="libs"/>
         <source-file src="sdk/android/lib/pingpp/libs/UPPayAssistEx.jar" target-dir="libs"/>   
         <source-file src="sdk/android/lib/pingpp/libs/UPPayPluginExPro.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/mqqopenpay.jar" target-dir="libs"/>
         
         <source-file src="sdk/android/lib/pingpp/libs/armeabi/libentryexpro.so" target-dir="libs/armeabi"/>
         <source-file src="sdk/android/lib/pingpp/libs/armeabi/libuptsmaddon.so" target-dir="libs/armeabi"/>

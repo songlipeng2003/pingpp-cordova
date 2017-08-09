@@ -4,7 +4,8 @@
     - iOS:  2.2.16
         - 更改：更新 Alipay SDK 
         - 更改：更新 Unionpay SDK 
-
+    - Android:  2.1.11
+        - 更改：更新 Android SDK v2.1.11
 
 ### 1.0.0
 - 创建 pingpp-cordova
@@ -13,3 +14,5 @@
         - 更改：更新 Alipay SDK (兼容 支付宝 2.0)
     - Android: 2.1.9 
         - 更改： 更新支付宝SDK v15.2.8
+
+
