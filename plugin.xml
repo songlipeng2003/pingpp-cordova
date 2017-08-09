@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-pingpp"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        version="1.0.0">
+        version="1.0.1">
 
     <name>Pingpp</name>
     <description>cordova plugin for ping++</description>
@@ -110,6 +110,7 @@
         <framework src="QuartzCore.framework" />
         <framework src="CoreTelephony.framework" />
         <framework src="CoreMotion.framework" />
+        <framework src="CoreLocation.framework" />
         <framework src="libc++.tbd" />
         <framework src="libz.tbd" />
         <framework src="libsqlite3.0.tbd" />

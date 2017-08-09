@@ -41,7 +41,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    
     width:100%;
 }
 
@@ -113,3 +113,38 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+.conbor{ margin:3%; width:90%; display:block;}
+@media screen and (min-width:769px) {
+body,p,div,ul,ol,li,dl,dt,dd,span,var,em,a,img,strong,table,td,tr,h2,h3,h4,h5,input{font-family: Arial, Helvetica, sans-serif;margin:0;padding:0;font-size:40px;font-family:微软雅黑; color:#f0ecf3;}
+.consj span{ font-size:1.3em;}
+.testbtn{ font-size:1.3em;}
+.tit{ font-size:1.7em;}
+}
+
+@media screen and (min-width:480px) and (max-width:768px) {
+body,p,div,ul,ol,li,dl,dt,dd,span,var,em,a,img,strong,table,td,tr,h2,h3,h4,h5,input{font-family: Arial, Helvetica, sans-serif;margin:0;padding:0;font-size:32px;font-family:微软雅黑;color:#f0ecf3;}
+.consj span{ font-size:1.3em;}
+.tit{ font-size:1.7em;}
+.testbtn{ font-size:1.3em;}
+}
+@media screen and (min-width:320px) and (max-width:480px) {
+body,p,div,ul,ol,li,dl,dt,dd,span,var,em,a,img,strong,table,td,tr,h2,h3,h4,h5,input{font-family: Arial, Helvetica, sans-serif;margin:0;padding:0;font-size:16px;font-family:微软雅黑;color:#f0ecf3;}
+.consj span{ font-size:1.3em;}
+.tit{ font-size:1.7em;}
+.testbtn{ font-size:1.3em;}
+}
+
+@media screen and (min-width:240px) and (max-width:320px) {
+body,p,div,ul,ol,li,dl,dt,dd,span,var,em,a,img,strong,table,td,tr,h2,h3,h4,h5,input{font-family: Arial, Helvetica, sans-serif;margin:0;padding:0;font-size:12px;font-family:微软雅黑;color:#f0ecf3;}
+.consj span{ font-size:1.3em;}
+.tit{ font-size:1.7em;}
+.testbtn{ font-size:1.3em;}
+}
+
+.consj{ margin:0 0 0 5%;}
+.consj span{ width:85%; display:block; margin:4% 0 3% 0;}
+.tit{ background:#27A73F; width:100%; padding:2% 0; text-align:center;}
+
+body{ background:#077CE3; width:100%; height:100%;}
+.testbtn{ margin:3% 0; background:-webkit-gradient(linear,0 0,0 100%,from(#FFCD00),color-stop(50%,#FFBC00),color-stop(50%,#FFA500)); border:1px solid #FFA700; display:block; -webkit-border-radius:8px;text-align:center; padding:2%; color:#712000; display:block;}
+

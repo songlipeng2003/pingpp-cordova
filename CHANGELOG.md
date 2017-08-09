@@ -1,3 +1,11 @@
+### 1.0.1
+- 修改 example 样式
+- Ping++ 官方 SDK 版本 :
+    - iOS:  2.2.16
+        - 更改：更新 Alipay SDK 
+        - 更改：更新 Unionpay SDK 
+
+
 ### 1.0.0
 - 创建 pingpp-cordova
 - Ping++ 官方 SDK 版本 :
