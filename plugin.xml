@@ -69,9 +69,9 @@
         </config-file>
 
         <source-file src="src/android/PingppPlugin.java" target-dir="src/cordova/plugin/pingpp/"/>
-        <source-file src="sdk/android/lib/pingpp/libs/alipaySingle-20170510.jar" target-dir="libs"/>
-        <source-file src="sdk/android/lib/pingpp/libs/libammsdk.jar" target-dir="libs"/>
-        <source-file src="sdk/android/lib/pingpp/libs/libpingpp-2.1.11.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/alipaySdk-20170725.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/wechat-sdk-android-without-mta.jar" target-dir="libs"/>
+        <source-file src="sdk/android/lib/pingpp/libs/libpingpp-2.1.13.jar" target-dir="libs"/>
         <source-file src="sdk/android/lib/pingpp/libs/UPPayAssistEx.jar" target-dir="libs"/>   
         <source-file src="sdk/android/lib/pingpp/libs/UPPayPluginExPro.jar" target-dir="libs"/>
         <source-file src="sdk/android/lib/pingpp/libs/mqqopenpay.jar" target-dir="libs"/>
