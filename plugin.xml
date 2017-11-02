@@ -12,6 +12,8 @@
     <engines>
         <engine name="cordova" version=">=5.4.1"/>
     </engines>
+
+    <preference name="PINGPP_URL_SCHEME" />
     
     <js-module src="www/pingpp.js" name="pingpp">
         <clobbers target="Pingpp" />
@@ -136,7 +138,7 @@
             <feature name="PingppPlugin">
                 <param name="ios-package" value="PingppPlugin"/>
             </feature>
-            <preference name="pingpp_url_scheme" value="$pingpp_url_scheme" />
+            <preference name="pingpp_url_scheme" value="$PINGPP_URL_SCHEME" />
         </config-file>
 
         <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
@@ -154,7 +156,7 @@
                     <key>CFBundleURLSchemes</key>
                     <array>
                         <!-- 填写URL-SCHEME -->
-                        <string>$pingpp_url_scheme</string>
+                        <string>$PINGPP_URL_SCHEME</string>
                     </array>
                 </dict>
             </array>
